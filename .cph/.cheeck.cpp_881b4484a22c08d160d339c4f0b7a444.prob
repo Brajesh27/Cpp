@@ -1,0 +1,1 @@
+{"name":"Local: cheeck","url":"/Users/ramreddy/cpp/cheeck.cpp","tests":[{"id":1705504368565,"input":"4\n20 4 12 1 3\n20 4 12 1 1\n20 4 12 3 1\n117 21 35 10 2","output":""},{"id":1705504379366,"input":"1\n117 21 35 10 2","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/Users/ramreddy/cpp/cheeck.cpp","group":"local","local":true}

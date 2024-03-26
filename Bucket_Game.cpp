@@ -24,19 +24,23 @@ int main()
 
         int Alice = 0;
         int Bob = 0;
-
+         bool first = false;
         for (int i = 0; i < n; i++)
         {
             if (arr[i] % 2 == 0)
             {
+                if(first==false){
                 Bob++;
+                }
+                else{
+                    Alice++;
+                }
             }
             else
             {
                 Alice++;
-                int temp = Alice;
-                Alice = Bob;
-                Bob = temp;
+                
+             
             }
         }
           cout << "Alice: " << Alice << ", Bob: " << Bob << "\n";

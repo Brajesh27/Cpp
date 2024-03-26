@@ -1,33 +1,66 @@
-#include <bits/stdc++.h>
+// JAI SHREE RAM
+#include "bits/stdc++.h"
 using namespace std;
-
-int main() 
+typedef long long int ll;
+int main()
 {
-    int t;  cin >> t;
-    while (t--) {
-        int n,k;    cin >> n >> k;
-        string s; cin >> s;
-      
-      vector<int> idx;
-      int ct=0;
-      
-      for (int i=0;i<n;i++) {
-        if (s[i] == '1') ct++;
-      }
-      
-      if (ct >k) {
-        for (int i=0;i<n;i++) {
-          if (s[i]=='1' && k>0) {
-            s[i]='0';
-            k--;
-          }
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    ll t;
+    cin >> t;
+    while (t--)
+    {
+        ll n, k;
+        cin >> n >> k;
+        string s;
+        cin >> s;
+
+        if (k == 0)
+            cout << s;
+        else
+        {
+            int z = count(s.begin(), s.end(), '0');
+            if (z == n && n != 1)
+            {
+                if (k > n)
+                {
+                    cout << "0";
+                }
+                else
+                    cout << s.substr(0, n - k);
+            }
+            else if (n == 1)
+            {
+
+                cout << "0";
+            }
+            else
+            {
+                int i = 0;
+                while (k != 0 && n != 0)
+                {
+                    if (s[i] == '1')
+                    {
+                        s.erase(s.begin() + i);
+                        k--;
+                    }
+                    i++;
+                    n--;
+                }
+                if (k >= 0)
+                {
+                    if (s.size() == 1 || s.empty() == true)
+                        cout << "0";
+                }
+                else
+                {
+                    cout<<s;
+                }
+            }
+            // else{
+
+            // }
         }
-        cout << s << endl;
-      } else {
-        for (int i=0;i<(n-k);i++) cout << 0;
-        cout << endl;
-      }
-      
+        cout << "\n";
     }
-    return 0;
 }

@@ -13,7 +13,7 @@ int main() {
         cin>>n>>k;
         ll s = (n*(n-1))/2;
         if(k==0) cout<<n;// no bridges detroyed
-        else if(k>=n || s==k) cout<<"1";// all bridges destroyed
+        else if(k>=n-1 || s==k) cout<<"1";// all bridges destroyed
         else {
             cout<<n;
         }
@@ -26,11 +26,3 @@ int main() {
     }
 
 }
-//4 3
-// 1-2
-// | |
-// 3-4
-
-
-// if k>=n eddy can stay in only 1 island
-//1
